@@ -17,7 +17,7 @@ Class {
 
 { #category : #accessing }
 Counter class >> startingAt: anInteger [ 
-	self shouldBeImplemented.
+	^ Counter new count: anInteger   
 ]
 
 { #category : #accessing }
@@ -43,16 +43,12 @@ Counter >> increment [
 { #category : #initialization }
 Counter >> initialize [
 "set the initial value of the value to 0"
-"Your code here"		
+"Your code here inicializar en cero retornar " 	
+	^ self new count 
 ]
 
 { #category : #printing }
 Counter >> printOn: aStream [
 	super printOn: aStream.
 	aStream nextPutAll: ' with value: ', count printString.
-]
-
-{ #category : #accessing }
-Counter >> startingAt: anInteger [
-	^ self new count: anInteger.
 ]
