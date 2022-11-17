@@ -1,3 +1,28 @@
+"
+Please comment me using the following template inspired by Class Responsibility Collaborator (CRC) design:
+
+For the Class part:  State a one line summary. For example, ""I represent a paragraph of text"".
+
+For the Responsibility part: Three sentences about my main responsibilities - what I do, what I know.
+
+For the Collaborators Part: State my main collaborators and one line about how I interact with them. 
+
+Public API and Key Messages
+Homework
+- message one   
+- message two 
+- (for bonus points) how to create instances.
+
+   One simple example is simply gorgeous.
+ 
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	lado:		<Object>
+
+
+    Implementation Points
+"
 Class {
 	#name : #Cuadrado,
 	#superclass : #Figura,
@@ -9,16 +34,21 @@ Class {
 
 { #category : #initialization }
 Cuadrado >> initialize [  
-^	numLado :=4.
+	numLado :=4.
 ]
 
-{ #category : #initialization }
-Cuadrado >> lado [  
-^	numLado :=4.
+{ #category : #accessing }
+Cuadrado >> numLado [		
+	^ numLado 	.	
 ]
 
 { #category : #printing }
 Cuadrado >> printOn: 	name [
 		super	 printOn: name .
 		^ 	'Cuadrado'
+]
+
+{ #category : #initialization }
+Cuadrado >> tipo [	  
+^	'	Soy un Cuadrado'.
 ]
